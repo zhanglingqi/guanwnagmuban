@@ -14,50 +14,50 @@
             </div>
         </div> -->
          <div id="customer" class="container-fuild">
-      <div class=" customer-container">
-            <p class="customer-title text-center">代理商展示</p>
-            <div class="swiper-container customer-swiper hidden-xs">
-            <div class="swiper-wrapper">
-                <div
-                class="swiper-slide customer-block"
-                v-for="(item,index) in customerList"
-                :key="index"
-                >
-                <div class="customer-logo">
-                    <img class="center-block" src="https://c.360.cn/assets/images/product/renlianshibieyingjian/feature-0.png" alt="logo">
-                </div>
-                <!-- <div class="customer-yh">
-                    <img src="@/assets/img/yinhao.png" alt="引号">
-                </div> -->
-                <div class="customer-content2" style="font-size:18px;font-weight:700;text-align: center;">{{item.title}}</div>
-                <div class="customer-content1" style="margin-top:10px;text-align: center;">
-                    <small style="font-size:16px;" v-html="item.content"></small>
-                </div>
-                
-                </div>
-            </div>
-            <!-- 如果需要导航按钮 -->
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
-            </div>
-            <div class="row visible-xs customer-block">
-            <div class="col-xs-12" v-for="(item,index) in customerList" :key="index">
-                <div class="customer-logo">
-                <img class="center-block" :src="item.logo" alt="logo">
-                </div>
-                <!-- <div class="customer-yh">
-                <img src="@/assets/img/yinhao.png" alt="引号">
-                </div> -->
-                <div class="customer-content2">
-                <small>{{item.title}}</small>
-                </div>
-                <div class="customer-content1">
-                <small>{{item.content}}</small>
-                </div>
-                
-            </div>
-            </div>
-        </div>
+            <div class=" customer-container">
+                  <p class="customer-title text-center">代理商展示</p>
+                  <div class="swiper-container customer-swiper hidden-xs">
+                  <div class="swiper-wrapper">
+                      <div
+                      class="swiper-slide customer-block"
+                      v-for="(item,index) in customerList"
+                      :key="index"
+                      >
+                      <div class="customer-logo">
+                          <img class="center-block" src="https://c.360.cn/assets/images/product/renlianshibieyingjian/feature-0.png" alt="logo">
+                      </div>
+                      <!-- <div class="customer-yh">
+                          <img src="@/assets/img/yinhao.png" alt="引号">
+                      </div> -->
+                      <div class="customer-content2" style="font-size:18px;font-weight:700;text-align: center;">{{item.title}}</div>
+                      <div class="customer-content1" style="margin-top:10px;text-align: center;">
+                          <small style="font-size:16px;" v-html="item.content"></small>
+                      </div>
+                      
+                      </div>
+                  </div>
+                  <!-- 如果需要导航按钮 -->
+                  <!-- <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div> -->
+                  </div>
+                  <div class="row visible-xs customer-block">
+                  <div class="col-xs-12" v-for="(item,index) in customerList" :key="index">
+                      <div class="customer-logo">
+                      <img class="center-block" :src="item.logo" alt="logo">
+                      </div>
+                      <!-- <div class="customer-yh">
+                      <img src="@/assets/img/yinhao.png" alt="引号">
+                      </div> -->
+                      <div class="customer-content2">
+                      <small>{{item.title}}</small>
+                      </div>
+                      <div class="customer-content1">
+                      <small>{{item.content}}</small>
+                      </div>
+                      
+                  </div>
+                  </div>
+              </div>
         </div>
     </div>
 </template>
@@ -78,199 +78,199 @@ export default {
                 }
             ],
             customerList: [
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-          `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_toyota.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_toyota.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_toyota.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "门禁类--人脸识别门禁8寸/5.5寸  ",
-          content:
-            `<div>86盒式部署、安装便捷</div>
-          <div>本地化计算、存储，安全快捷</div>
-          <div>触摸屏、全铝合金机身，品质精良</div>
-          <div>毫秒级识别、准确易用</div>
-          <div>双目识别，安全防伪</div>
-          <div>IP65防尘防水，室内室外兼用</div>
-          <div>高屏占比，音视频本地播放</div>
-          <div>熔断保护，高可用/div>
-          <div>测温联动、一体化识别</div>
-          <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
-        }
-      ],
+            {
+              logo: require("@/assets/img/logo_hp.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+              `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_kk.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_toyota.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_kk.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_hp.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_toyota.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_kk.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_hp.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_toyota.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_hp.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_kk.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            },
+            {
+              logo: require("@/assets/img/logo_hp.png"),
+              title:
+                "门禁类--人脸识别门禁8寸/5.5寸  ",
+              content:
+                `<div>86盒式部署、安装便捷</div>
+              <div>本地化计算、存储，安全快捷</div>
+              <div>触摸屏、全铝合金机身，品质精良</div>
+              <div>毫秒级识别、准确易用</div>
+              <div>双目识别，安全防伪</div>
+              <div>IP65防尘防水，室内室外兼用</div>
+              <div>高屏占比，音视频本地播放</div>
+              <div>熔断保护，高可用/div>
+              <div>测温联动、一体化识别</div>
+              <div>支持人脸、IC卡、ID卡、二维码、密码多重验证组合</div>`
+            }
+          ],
         }
     },
     mounted() {
@@ -351,7 +351,7 @@ export default {
 #customer .customer-logo img {
   width: 300px;
   height: 200px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 #customer .customer-yh img {
   width: 34px;
@@ -363,36 +363,6 @@ export default {
 }
 #customer .customer-content2 {
   padding-top: 20px;
-}
-/* 为什么选择我们 */
-#whyChooseUs {
-  padding: 100px;
-}
-#whyChooseUs .whyChooseUs-title {
-  margin-bottom: 50px;
-}
-#whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
-  font-size: 25px;
-  font-weight: 500;
-}
-#whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
-  font-size: 14px;
-}
-#whyChooseUs .server-block {
-  padding: 50px 20px;
-  border: 1px solid #ccc;
-  border-bottom: 5px solid #ccc;
-}
-#whyChooseUs .server-block img {
-  width: 48px;
-  height: 48px;
-}
-#whyChooseUs .server-block > p {
-  font-size: 20px;
-  margin: 30px 0;
-}
-#whyChooseUs .server-block > div {
-  color: #ccc;
 }
 @media screen and (max-width: 768px){
     #right{

@@ -21,16 +21,61 @@
                     </div>
                 </div>
             </div> -->
-            <div>
-                <img src="../assets/img/ceshi1.png" alt="">
-            </div>
-            <div>
-                <img src="../assets/img/ceshi2.png" alt="">
-            </div>
+                  <div class=" customer-container">
+                  <!-- <p class="customer-title text-center">代理商展示</p> -->
+                  <div class="swiper-container customer-swiper hidden-xs">
+                  <div class="swiper-wrapper">
+                      <div
+                      class="swiper-slide customer-block"
+                      v-for="(item,index) in customerList"
+                      :key="index"
+                      >
+                      <div class="customer-logo">
+                          <img class="center-block" src="https://c.360.cn/assets/images/solution/shijueanquan/scene-0.png" alt="logo">
+                      </div>
+                      <!-- <div class="customer-yh">
+                          <img src="@/assets/img/yinhao.png" alt="引号">
+                      </div> -->
+                      <div class="customer-content2" style="font-size:18px;font-weight:700;text-align: left;">{{item.title}}</div>
+                      <div class="line"></div>
+                      <div style="display:inline-block;margin-top:10px">业务需求</div>
+                      <div class="customer-content1" style="margin-top:10px;text-align: left;">
+                          <small style="font-size:16px;" v-html="item.content"></small>
+                      </div>
+                      <div class="line"></div>
+                      <div style="display:inline-block;margin-top:10px">解决方案</div>
+                      <div class="customer-content1" style="margin-top:10px;text-align: left;">
+                          <small style="font-size:16px;" v-html="item.content"></small>
+                      </div>
+                      </div>
+                  </div>
+                  <!-- 如果需要导航按钮 -->
+                  <!-- <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div> -->
+                  </div>
+                  <div class="row visible-xs customer-block">
+                  <div class="col-xs-12" v-for="(item,index) in customerList" :key="index">
+                      <div class="customer-logo">
+                      <img class="center-block" :src="item.logo" alt="logo">
+                      </div>
+                      <!-- <div class="customer-yh">
+                      <img src="@/assets/img/yinhao.png" alt="引号">
+                      </div> -->
+                      <div class="customer-content2">
+                      <small>{{item.title}}</small>
+                      </div>
+                      <div class="customer-content1">
+                      <small>{{item.content}}</small>
+                      </div>
+                      
+                  </div>
+                  </div>
+              </div>
         </div>
     </div>
 </template>
 <script>
+import Swiper from "swiper";
 import { WOW } from 'wowjs';
 export default {
     name: 'Service',
@@ -58,10 +103,56 @@ export default {
                     eng_title: 'iOS App Dev',
                     img: require('@/assets/img/service4.jpg')
                 }
-            ]
+            ],
+            customerList: [
+            {
+              logo: require("@/assets/img/logo_hp.png"),
+              title: "智慧园区",
+              content:
+              `将人工智能融入到园区的日常管理中，实现园区区域管控、人员身份验证、提供考勤、门禁、访客的一体化管理，为园区提供人脸识别大数据支撑。提升产业园区的内部管理水平和服务水平。主要面临的痛点有：信息化程度不高、人员众多、管理复杂、管控成本高；信息泄露，园区安全问题突出；传统刷卡方式，数据真伪难辨；难以满足政府及公安等行业管理部门的管理要求`
+            },
+            {
+              logo: require("@/assets/img/logo_kk.png"),
+              title:
+                "智慧校园",
+              content:
+                `将人脸识别技术与校园的管理系统有机的结合，应用在高校的公共安全、考勤管理、访客管理、考试管理、图书馆管理、宿舍管理、实验室管理、校园社区管理等教学与生活场景之中， 打造更加安全、便捷的新时代校园环境`
+            },
+            {
+              logo: require("@/assets/img/logo_hp.png"),
+              title:
+                "智慧园区",
+              content:
+              `将人工智能融入到园区的日常管理中，实现园区区域管控、人员身份验证、提供考勤、门禁、访客的一体化管理，为园区提供人脸识别大数据支撑。提升产业园区的内部管理水平和服务水平。主要面临的痛点有：信息化程度不高、人员众多、管理复杂、管控成本高；信息泄露，园区安全问题突出；传统刷卡方式，数据真伪难辨；难以满足政府及公安等行业管理部门的管理要求`
+            },
+            {
+              logo: require("@/assets/img/logo_kk.png"),
+              title:
+                "智慧校园",
+              content:
+                `将人脸识别技术与校园的管理系统有机的结合，应用在高校的公共安全、考勤管理、访客管理、考试管理、图书馆管理、宿舍管理、实验室管理、校园社区管理等教学与生活场景之中， 打造更加安全、便捷的新时代校园环境`
+            },
+          ],
         }
     },
     mounted(){
+        new Swiper(".customer-swiper", {
+        loop: true, // 循环模式选项
+        slidesPerView: 2,
+        //自动播放
+        autoplay: {
+            delay: 300000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+        observeParents: true //修改swiper的父元素时，自动初始化swiper
+        });
         var wow = new WOW();
         wow.init();
     },
@@ -148,6 +239,44 @@ export default {
     opacity: 1;
     width: 90%;
     height: 90%;
+}
+
+.container {
+  /* padding: 50px 0; */
+  box-sizing: border-box;
+  /* background: #efefef; */
+  transition: all ease 0.6s;
+}
+.container .customer-title {
+  font-size: 30px;
+  color: rgb(102, 102, 102);
+  margin: 0 0 30px;
+}
+.container .customer-block {
+  background: #fff;
+  padding: 30px;
+}
+.container .customer-logo img {
+  width: 100%;
+    height: 220px;
+    /* border: 1px solid #ccc; */
+}
+.container .customer-yh img {
+  width: 34px;
+  height: 34px;
+}
+.container .customer-content1 {
+  padding-bottom: 20px;
+  /* border-bottom: 1px solid #0ce9f1; */
+}
+.container .customer-content2 {
+  padding-top: 20px;
+}
+.line {
+    display:inline-block;
+    width: 5px;
+    height: 14px;
+    background-color: #2cff00;
 }
 </style>
 
